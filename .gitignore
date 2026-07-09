@@ -1,0 +1,44 @@
+# Dependency & environment
+/vendor/
+.env
+
+# Writable (biarkan foldernya ada, tapi isinya jangan)
+/writable/*
+!/writable/index.html
+
+# File testing / scratch pribadi
+test.php
+scratch.php
+scratch_chat.php
+check.php
+fix_*.php
+fix_views.py
+extract_pdf.py
+extracted_pdf.txt
+generate_report.php
+generator.php
+get_user_schema.php
+create_accounts.php
+db_update.php
+update_*.php
+setup_*.php
+theme_changer.ps1
+read_pdf.php
+preload.php
+
+# Dokumen & laporan pribadi
+*.pdf
+*.doc
+*.docx
+*.zip
+Laporan_UAS/
+Luxury_Login_Page_Design/
+dashboard-toko/
+
+# File sensitif / kredensial
+client_secret_*.json
+*.sql
+
+# Lainnya
+unnamed.png
+.FullName

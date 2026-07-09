@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "ab123456-7890-1234-5678-abcdef123456",
+		"name": "WarungSebul API Integrations",
+		"description": "Collection untuk menguji endpoint web yang terintegrasi dengan RajaOngkir dan Komerce API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Checkout (Komerce API)",
+			"item": [
+				{
+					"name": "Get Location (Kelurahan)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/get-location?search=bandungrejo",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8080",
+							"path": ["get-location"],
+							"query": [
+								{ "key": "search", "value": "bandungrejo" }
+							]
+						}
+					}
+				},
+				{
+					"name": "Get Cost (Ongkir)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/get-cost?destination=64999",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8080",
+							"path": ["get-cost"],
+							"query": [
+								{ "key": "destination", "value": "64999" }
+							]
+						}
+					}
+				}
+			]
+		},
+		{
+			"name": "Cek Ongkir (RajaOngkir Starter)",
+			"item": [
+				{
+					"name": "Get Provinsi",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ongkir/provinsi",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8080",
+							"path": ["ongkir", "provinsi"]
+						}
+					}
+				},
+				{
+					"name": "Get Kota",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ongkir/kota/9",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8080",
+							"path": ["ongkir", "kota", "9"]
+						}
+					}
+				},
+				{
+					"name": "Cek Biaya",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{ "key": "origin", "value": "419", "type": "text" },
+								{ "key": "destination", "value": "114", "type": "text" },
+								{ "key": "weight", "value": "1000", "type": "text" },
+								{ "key": "courier", "value": "jne", "type": "text" }
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/ongkir/biaya",
+							"protocol": "http",
+							"host": ["localhost"],
+							"port": "8080",
+							"path": ["ongkir", "biaya"]
+						}
+					}
+				}
+			]
+		}
+	]
+}
